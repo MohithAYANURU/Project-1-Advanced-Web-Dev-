@@ -1,0 +1,57 @@
+/* ---------------- Features Section ---------------- */
+.features {
+    text-align: center;
+    padding: 1em 1em; /* reduced top/bottom padding */
+}
+
+.features h2 {
+    margin: 0.5em 0;
+    font-size: 1.8em;
+}
+
+.features p {
+    margin-bottom: 1.5em;
+    color: #555;
+}
+
+/* Features Container - 2x2 Grid */
+.features .features_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 1em; /* reduced gap to bring cards closer */
+    justify-items: center; /* center items horizontally */
+}
+
+/* Feature Articles */
+.features article {
+    max-width: 240px;
+    background: #80808014;
+    padding: 1em 0.5em; /* reduced padding */
+    border-radius: var(--border-radius);
+    box-shadow: -2px 4px 5px 2px #80808054, -1px 2px 15px 0px #80808030;
+    margin-bottom: 0.5em; /* reduced vertical spacing */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.features article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+/* Icons */
+.features .fa-solid,
+.features .fa-regular {
+    background-color: var(--main-clr);
+    color: white;
+    padding: 45px;
+    border-radius: 50%;
+    margin-bottom: 1em;
+}
+
+/* Responsive - single column on small screens */
+@media (max-width: 600px) {
+    .features .features_container {
+        grid-template-columns: 1fr; /* single column on mobile */
+        gap: 1.5em; /* slightly more spacing on mobile */
+    }
+}
